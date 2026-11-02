@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MFU Chinese 2 — Oral Test 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090a0f;
+      --card: #11131a;
+      --card-border: #1a1e28;
+      --card-hover: #1e222e;
+      --text: #f0f2f7;
+      --text-muted: #787f94;
+      --accent: #d4a359;
+      --accent-bg: rgba(212, 163, 89, 0.08);
+      --accent-border: rgba(212, 163, 89, 0.2);
+      --green: #2ecc71;
+      --green-bg: rgba(46, 204, 113, 0.08);
+      --green-border: rgba(46, 204, 113, 0.2);
+      --blue: #38bdf8;
+      --blue-bg: rgba(56, 189, 248, 0.08);
+      --blue-border: rgba(56, 189, 248, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Thai', -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 16px 80px 16px;
+    }
+
+    .zh {
+      font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", serif;
+      letter-spacing: 0.02em;
+    }
+
+    header {
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .title-group h1 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .title-group p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 4px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: inherit;
+    }
+
+    .tab-btn:hover {
+      color: var(--text);
+    }
+
+    .tab-btn.active {
+      background: var(--card);
+      color: var(--text);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--card-border);
+    }
+
+    main {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .focus-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 34px 30px;
+      box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+    .lesson-tag {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .q-number {
+      font-size: 12px;
+      font-family: monospace;
+      color: var(--accent);
+      font-weight: 600;
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .q-text {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .pinyin-sub {
+      font-size: 14px;
+      color: var(--accent);
+      font-family: monospace;
+      margin-bottom: 6px;
+    }
+
+    .meta-line {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .thai-read {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.4;
+    }
+
+    .trans-line {
+      font-size: 13px;
+      color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 2px solid var(--accent);
+      padding: 4px 10px;
+      border-radius: 0 6px 6px 0;
+      margin-top: 4px;
+      line-height: 1.45;
+    }
+
+    .trans-line strong {
+      color: var(--accent);
+      font-weight: 600;
+      margin-right: 4px;
+    }
+
+    .audio-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      margin-top: 14px;
+      transition: all 0.15s ease;
+      font-family: inherit;
+    }
+
+    .audio-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--text-muted);
+    }
+
+    .audio-btn:active {
+      transform: scale(0.97);
+    }
+
+    .audio-btn.primary {
+      background: var(--accent-bg);
+      border-color: var(--accent-border);
+      color: var(--accent);
+    }
+
+    .audio-btn.primary:hover {
+      background: rgba(212, 163, 89, 0.15);
+    }
+
+    .audio-btn.success {
+      background: var(--green-bg);
+      border-color: var(--green-border);
+      color: var(--green);
+    }
+
+    .audio-btn.success:hover {
+      background: rgba(46, 204, 113, 0.15);
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--card-border);
+      margin: 24px 0;
+    }
+
+    .radar-box {
+      background: rgba(212, 163, 89, 0.04);
+      border: 1px solid var(--accent-border);
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .radar-left span {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .radar-trigger {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .radar-thai {
+      font-size: 12px;
+      color: #cbd5e1;
+      margin-top: 2px;
+    }
+
+    .ans-box {
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .ans-box .section-label {
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+
+    .ans-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+      line-height: 1.35;
+    }
+
+    .ans-pinyin {
+      font-size: 13px;
+      color: var(--green);
+      font-family: monospace;
+      margin-bottom: 6px;
+    }
+
+    .ans-thai-read {
+      font-size: 13px;
+      color: #94a3b8;
+      margin-bottom: 6px;
+    }
+
+    .ans-trans-line {
+      font-size: 13px;
+      color: #e2e8f0;
+      background: rgba(0, 0, 0, 0.25);
+      border-left: 2px solid var(--green);
+      padding: 4px 10px;
+      border-radius: 0 6px 6px 0;
+      line-height: 1.45;
+    }
+
+    .ans-trans-line strong {
+      color: var(--green);
+      font-weight: 600;
+      margin-right: 4px;
+    }
+
+    .nav-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .ctrl-btn {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      font-family: inherit;
+    }
+
+    .ctrl-btn:hover {
+      background: var(--card-hover);
+      border-color: var(--text-muted);
+    }
+
+    .shortcuts-hint {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 12px;
+    }
+
+    kbd {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--card-border);
+      border-radius: 4px;
+      padding: 2px 5px;
+      font-size: 10px;
+      color: var(--text);
+    }
+
+    .list-view {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .list-row {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: 36px 1fr 1fr;
+      gap: 16px;
+      align-items: flex-start;
+      transition: border-color 0.15s ease;
+    }
+
+    .list-row:hover {
+      border-color: var(--card-hover);
+    }
+
+    .list-num {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 600;
+      font-family: monospace;
+      padding-top: 2px;
+    }
+
+    .col-q p {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .col-q .trans-mini {
+      font-size: 12px;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+    .col-q .read-mini {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .col-a p {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--green);
+    }
+    .col-a .trans-mini {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-top: 2px;
+    }
+    .col-a .read-mini {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+      gap: 10px;
+    }
+
+    .vocab-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .vocab-card:hover {
+      border-color: var(--accent-border);
+      background: var(--card-hover);
+      transform: translateY(-2px);
+    }
+
+    .vocab-zh {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .vocab-pin {
+      font-size: 11px;
+      color: var(--accent);
+      font-family: monospace;
+      margin-bottom: 4px;
+    }
+
+    .vocab-th {
+      font-size: 12px;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .vocab-en {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 600px) {
+      .focus-card {
+        padding: 24px 20px;
+      }
+      .q-text {
+        font-size: 20px;
+      }
+      .ans-text {
+        font-size: 19px;
+      }
+      .list-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .shortcuts-hint {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-area">
+      <div class="logo-badge">中</div>
+      <div class="title-group">
+        <h1>MFU Chinese 2 • Oral Test</h1>
+        <p>16 Questions & Part 1 Vocabulary with Thai Translation</p>
+      </div>
+    </div>
+
+    <nav>
+      <button class="tab-btn active" onclick="setTab('focus')" id="tab-focus">Focus</button>
+      <button class="tab-btn" onclick="setTab('sheet')" id="tab-sheet">Sheet</button>
+      <button class="tab-btn" onclick="setTab('vocab')" id="tab-vocab">Vocab (30)</button>
+    </nav>
+  </header>
+
+  <main>
+    <div id="view-focus">
+      <div class="focus-card">
+        
+        <div class="card-top">
+          <span class="lesson-tag" id="f-lesson">Lesson 6</span>
+          <span class="q-number" id="f-num">01 / 16</span>
+        </div>
+
+        <!-- 1. TEACHER QUESTION -->
+        <div class="section-label">
+          <span>Teacher Asks (คำถามอาจารย์)</span>
+        </div>
+        <div class="q-text zh" id="f-question">你的宿舍在哪儿？</div>
+        <div class="pinyin-sub" id="f-q-pin">Nǐ de sùshè zài nǎr?</div>
+
+        <div class="meta-line">
+          <div class="thai-read" id="f-q-thai">🗣️ อ่านว่า: หนี่ เตอะ ซู่เซ่อ ไจ้ หน่าร์?</div>
+          <div class="trans-line" id="f-q-trans"><strong>💬 แปล:</strong> หอพักของคุณอยู่ที่ไหน?</div>
+        </div>
+
+        <button class="audio-btn primary" onclick="playQuestion()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          Listen Question [Space]
+        </button>
+
+        <div class="divider"></div>
+
+        <!-- 2. SOUND RADAR -->
+        <div class="radar-box">
+          <div class="radar-left">
+            <span>Ear Radar (จุดสังเกตเสียง)</span>
+            <div class="radar-trigger zh" id="f-trigger">在哪儿 (zài nǎr)</div>
+            <div class="radar-thai" id="f-trigger-thai">ได้ยินคำว่า "ไจ้ หน่าร์" = ถามว่าอยู่ที่ไหน</div>
+          </div>
+          <button class="audio-btn" style="margin-top:0" onclick="playTrigger()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon></svg>
+            Sound
+          </button>
+        </div>
+
+        <!-- 3. YOUR ANSWER -->
+        <div class="ans-box">
+          <div class="section-label">Your Answer (ประโยคตอบ)</div>
+          <div class="ans-text zh" id="f-ans">在学校对面。</div>
+          <div class="ans-pinyin" id="f-ans-pin">Zài xuéxiào duìmiàn.</div>
+          
+          <div class="meta-line" style="margin-bottom: 8px;">
+            <div class="ans-thai-read" id="f-ans-thai">🗣️ อ่านว่า: ไจ้ เสวีย-เซี่ยว ตุ้ย-เมี่ยน</div>
+            <div class="ans-trans-line" id="f-ans-trans"><strong>💬 แปล:</strong> อยู่ตรงข้ามมหาวิทยาลัยครับ</div>
+          </div>
+
+          <button class="audio-btn success" onclick="playAnswer()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            Listen Answer [Enter]
+          </button>
+        </div>
+
+      </div>
+
+      <!-- BOTTOM NAVIGATION CONTROLS -->
+      <div class="nav-controls">
+        <button class="ctrl-btn" onclick="prevCard()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          Previous
+        </button>
+
+        <div class="shortcuts-hint">
+          <span><kbd>Space</kbd> Question</span>
+          <span><kbd>Enter</kbd> Answer</span>
+          <span><kbd>→</kbd> Next</span>
+        </div>
+
+        <button class="ctrl-btn" onclick="nextCard()">
+          Next
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- VIEW 2: FULL CHEAT SHEET -->
+    <div id="view-sheet" class="list-view hidden"></div>
+
+    <!-- VIEW 3: VOCABULARY -->
+    <div id="view-vocab" class="vocab-grid hidden"></div>
+  </main>
+
+  <script>
+    const QUESTIONS = [
+      {
+        id: 1,
+        lesson: 6,
+        q: "你的宿舍/家/图书馆/书店在哪儿？",
+        qPin: "Nǐ de sùshè / jiā / túshūguǎn / shūdiàn zài nǎr?",
+        qThai: "🗣️ อ่านว่า: หนี่ เตอะ ซู่เซ่อ / เจีย / ถูซูกว่าน / ซูเตี้ยน ไจ้ หน่าร์?",
+        qTrans: "หอพัก / บ้าน / ห้องสมุด / ร้านหนังสือของคุณอยู่ที่ไหน?",
+        trigger: "在哪儿？ (zài nǎr?)",
+        triggerThai: "ได้ยิน: 'ไจ้ หน่าร์?' แปลว่า ถามหาที่ตั้งว่าอยู่ที่ไหน",
+        ans: "在学校对面。",
+        ansPin: "Zài xuéxiào duìmiàn.",
+        ansThai: "🗣️ อ่านว่า: ไจ้ เสวีย-เซี่ยว ตุ้ย-เมี่ยน",
+        ansTrans: "อยู่ตรงข้ามโรงเรียน / มหาวิทยาลัยครับ"
+      },
+      {
+        id: 2,
+        lesson: 6,
+        q: "下课以后，你要去哪儿？你要做什么？",
+        qPin: "Xiàkè yǐhòu, nǐ yào qù nǎr? Nǐ yào zuò shénme?",
+        qThai: "🗣️ อ่านว่า: เซี่ยเค่อ อี่โฮ่ว, หนี่ เย่า ชวี่ หน่าร์? หนี่ เย่า จั้ว เสินเมอ?",
+        qTrans: "หลังเลิกเรียนแล้ว คุณจะไปไหน? คุณจะทำอะไร?",
+        trigger: "下课以后 (xiàkè yǐhòu)",
+        triggerThai: "ได้ยิน: 'เซี่ย-เค่อ อี่-โฮ่ว' แปลว่า หลังเลิกเรียน",
+        ans: "下课以后，我要去食堂吃饭。",
+        ansPin: "Xiàkè yǐhòu, wǒ yào qù shítáng chīfàn.",
+        ansThai: "🗣️ อ่านว่า: เซี่ย-เค่อ อี่-โฮ่ว, หว่อ เย่า ชวี่ สือ-ถาง ชือ-ฟั่น",
+        ansTrans: "หลังเลิกเรียน ผมจะไปกินข้าวที่โรงอาหารครับ"
+      },
+      {
+        id: 3,
+        lesson: 6,
+        q: "你的宿舍/家离教室/学校大概有多远？",
+        qPin: "Nǐ de sùshè / jiā lí jiàoshì / xuéxiào dàgài yǒu duō yuǎn?",
+        qThai: "🗣️ อ่านว่า: หนี่ เตอะ ซู่เซ่อ... หลี... ต้าไก้ โหย่ว ตัว เยวี่ยน?",
+        qTrans: "หอพัก/บ้านของคุณ อยู่ห่างจากห้องเรียน/มหาลัยประมาณเท่าไหร่?",
+        trigger: "有多远？ (yǒu duō yuǎn?)",
+        triggerThai: "ได้ยิน: 'โหย่ว ตัว เยวี่ยน?' แปลว่า ไกลแค่ไหน / ห่างเท่าไหร่",
+        ans: "大概有五百米，很近。",
+        ansPin: "Dàgài yǒu wǔbǎi mǐ, hěn jìn.",
+        ansThai: "🗣️ อ่านว่า: ต้า-ไก้ โหย่ว อู่-ไป่ หมี่, เหิ่น จิ้น",
+        ansTrans: "ประมาณ 500 เมตร ใกล้มากครับ"
+      },
+      {
+        id: 4,
+        lesson: 6,
+        q: "去图书馆/学校/商店/C2教学楼怎么走？",
+        qPin: "Qù túshūguǎn / xuéxiào / shāngdiàn / C-èr jiàoxuélóu zěnme zǒu?",
+        qThai: "🗣️ อ่านว่า: ชวี่... เจิ่นเมอ โจ่ว?",
+        qTrans: "ไปห้องสมุด / โรงเรียน / ร้านค้า / ตึก C2 เดินไปยังไง?",
+        trigger: "怎么走？ (zěnme zǒu?)",
+        triggerThai: "ได้ยิน: 'เจิ่นเมอ โจ่ว?' แปลว่า เดินไปยังไง / ไปทางไหน",
+        ans: "一直往前走，往右拐。",
+        ansPin: "Yīzhí wǎng qián zǒu, wǎng yòu guǎi.",
+        ansThai: "🗣️ อ่านว่า: อี้-จื๋อ หว่าง เฉียน โจ่ว, หว่าง โย่ว กวั่ย",
+        ansTrans: "เดินตรงไปเรื่อยๆ แล้วเลี้ยวขวาครับ"
+      },
+      {
+        id: 5,
+        lesson: 7,
+        q: "你/你的手机/你的爸爸/你的妈妈怎么了？",
+        qPin: "Nǐ / Nǐ de shǒujī / Nǐ de bàba / Nǐ de māma zěnme le?",
+        qThai: "🗣️ อ่านว่า: หนี่ / หนี่ เตอะ โส่วจี / ป้าปะ / มามะ เจิ่นเมอ เลอ?",
+        qTrans: "คุณ / มือถือ / พ่อ / แม่ของคุณ เป็นอะไรไปเหรอ?",
+        trigger: "怎么了？ (zěnme le?)",
+        triggerThai: "ได้ยิน: 'เจิ่นเมอ เลอ?' แปลว่า เกิดอะไรขึ้น / เป็นอะไรไป",
+        ans: "我头疼，感冒了。",
+        ansPin: "Wǒ tóuténg, gǎnmào le. (มือถือ: wǒ de shǒujī huài le)",
+        ansThai: "🗣️ อ่านว่า: หว่อ โถว-เถิง, ก่าน-เม่า เลอ (ถ้ามือถือ: หว่อ เตอะ โส่วจี ฮว่ายเลอ)",
+        ansTrans: "ผมปวดหัว เป็นหวัดครับ (ถ้าถามถึงมือถือ: มือถือผมพังครับ)"
+      },
+      {
+        id: 6,
+        lesson: 7,
+        q: "昨天/昨天晚上/早上你去哪儿了/做什么了？",
+        qPin: "Zuótiān / Zuótiān wǎnshang / Zǎoshang nǐ qù nǎr le / zuò shénme le?",
+        qThai: "🗣️ อ่านว่า: จั๋วเทียน / จั๋วเทียนหว่านซ่าง... ชวี่ หน่าร์ เลอ / จั้ว เสินเมอ เลอ?",
+        qTrans: "เมื่อวาน / เมื่อคืน / เมื่อเช้า คุณไปไหนมา / ทำอะไรมา?",
+        trigger: "昨天 (zuótiān) + ...了？",
+        triggerThai: "ได้ยิน: 'จั๋ว-เทียน...เลอ?' แปลว่า เมื่อวาน...ทำอะไรมา",
+        ans: "我去超市买东西了。",
+        ansPin: "Wǒ qù chāoshì mǎi dōngxi le.",
+        ansThai: "🗣️ อ่านว่า: หว่อ ชวี่ ชาว-ซื่อ หม่าย ตง-ซี เลอ",
+        ansTrans: "ผมไปซื้อของที่ซูเปอร์มาเก็ตมาครับ"
+      },
+      {
+        id: 7,
+        lesson: 7,
+        q: "我们一起去超市，你要坐车去还是骑自行车去？",
+        qPin: "Wǒmen yìqǐ qù chāoshì, nǐ yào zuò chē qù háishi qí zìxíngchē qù?",
+        qThai: "🗣️ อ่านว่า: ...หนี่ เย่า จั้ว เชอ ชวี่ ไห-ซื่อ ฉี จื้อสิงเชอ ชวี่?",
+        qTrans: "เราไปซูเปอร์ด้วยกัน คุณจะนั่งรถไป หรือจะปั่นจักรยานไป?",
+        trigger: "还是 (háishi) + 坐车 / 骑车",
+        triggerThai: "ได้ยิน: 'ไห-ซื่อ?' แปลว่า หรือว่า (ให้เลือกรถหรือจักรยาน)",
+        ans: "坐车比较快，我们还是坐车去吧。",
+        ansPin: "Zuò chē bǐjiào kuài, wǒmen háishi zuò chē qù ba.",
+        ansThai: "🗣️ อ่านว่า: จั้ว เชอ ปี่-เจี้ยว ไคว้, หว่อ-เมิน ไห-ซื่อ จั้ว เชอ ชวี่ ปะ",
+        ansTrans: "นั่งรถเร็วกว่า เรานั่งรถไปกันเถอะครับ"
+      },
+      {
+        id: 8,
+        lesson: 8,
+        q: "你喜欢吃什么？/你会做泰国菜吗？味道怎么样？",
+        qPin: "Nǐ xǐhuan chī shénme? / Nǐ huì zuò Tàiguócài ma? Wèidào zěnmeyàng?",
+        qThai: "🗣️ อ่านว่า: หนี่ สี่ฮวาน ชือ เสินเมอ? / หนี่ ฮุ่ย จั้ว... มา? / เว่ยเต้า เจิ่นเมอย่าง?",
+        qTrans: "คุณชอบกินอะไร? / คุณทำอาหารไทยเป็นไหม? รสชาติเป็นยังไง?",
+        trigger: "味道怎么样？ (wèidào zěnmeyàng?)",
+        triggerThai: "ได้ยิน: 'เว่ย-เต้า เจิ่น-เมอ-อย่าง?' แปลว่า รสชาติเป็นยังไงบ้าง",
+        ans: "我会做泰国菜，味道很好，好吃极了。",
+        ansPin: "Wǒ huì zuò Tàiguócài, wèidào hěn hǎo, hǎochī jí le.",
+        ansThai: "🗣️ อ่านว่า: หว่อ ฮุ่ย จั้ว ไท่กั๋วไช่, เว่ย-เต้า เหิ่น ห่าว, ห่าว-ชือ จี๋ เลอ",
+        ansTrans: "ผมทำอาหารไทยเป็นครับ รสชาติดี อร่อยสุดๆ ครับ"
+      },
+      {
+        id: 9,
+        lesson: 8,
+        q: "你要看汉语书/中国电影还是英语书/泰国电影？",
+        qPin: "Nǐ yào kàn Zhōngguó diànyǐng háishi Tàiguó diànyǐng?",
+        qThai: "🗣️ อ่านว่า: ...เย่า คั่น จงกั๋ว เตี้ยนอิ่ง ไห-ซื่อ ไท่กั๋ว เตี้ยนอิ่ง?",
+        qTrans: "คุณอยากดูหนังจีน/อ่านหนังสือจีน หรือหนังไทย/หนังสืออังกฤษ?",
+        trigger: "还是 (háishi)",
+        triggerThai: "ได้ยิน: 'ไห-ซื่อ?' แปลว่า หรือว่า (เลือกตัวเลือกใดตัวเลือกหนึ่ง)",
+        ans: "我要看中国电影。",
+        ansPin: "Wǒ yào kàn Zhōngguó diànyǐng.",
+        ansThai: "🗣️ อ่านว่า: หว่อ เย่า คั่น จง-กั๋ว เตี้ยน-อิ่ง",
+        ansTrans: "ผมอยากดูหนังจีนครับ"
+      },
+      {
+        id: 10,
+        lesson: 9,
+        q: "你去过中国/北京/曼谷吗？你在清莱多久了？",
+        qPin: "Nǐ qùguò Màngǔ ma? Nǐ zài Qīnglái duōjiǔ le?",
+        qThai: "🗣️ อ่านว่า: หนี่ ชวี่-กั้ว... มา? / หนี่ จ้าย ชิงไหล ตัว-จิ่ว เลอ?",
+        qTrans: "คุณเคยไปกรุงเทพฯ ไหม? คุณอยู่ที่เชียงรายมานานแค่ไหนแล้ว?",
+        trigger: "去过...吗？ / 多久了？",
+        triggerThai: "ได้ยิน: 'ชวี่-กั้ว...มา?' (เคยไปไหม) / 'ตัว-จิ่ว เลอ?' (นานเท่าไหร่)",
+        ans: "我去过曼谷，我来清莱两个月了。",
+        ansPin: "Wǒ qùguò Màngǔ, wǒ lái Qīnglái liǎng gè yuè le.",
+        ansThai: "🗣️ อ่านว่า: หว่อ ชวี่-กั้ว ม่าน-กู่, หว่อ หลาย ชิง-ไหล เหลี่ยง เกอะ เยว่ เลอ",
+        ansTrans: "ผมเคยไปกรุงเทพฯ ครับ และผมมาอยู่เชียงรายได้ 2 เดือนแล้วครับ"
+      },
+      {
+        id: 11,
+        lesson: 9,
+        q: "你吃过草莓/榴莲吗？你学过汉语吗？学了多长时间了？",
+        qPin: "Nǐ xuéguò Hànyǔ ma? Xué le duō cháng shíjiān le?",
+        qThai: "🗣️ อ่านว่า: หนี่ เสวีย-กั้ว ฮั่นยวี่ มา? / เสวีย เลอ ตัว ฉาง สือเจียน เลอ?",
+        qTrans: "คุณเคยกินทุเรียน/สตรอว์เบอร์รีไหม? คุณเคยเรียนภาษาจีนไหม? เรียนมานานแค่ไหนแล้ว?",
+        trigger: "学过...吗？ / 多长时间？",
+        triggerThai: "ได้ยิน: 'เสวีย-กั้ว?' (เคยเรียนไหม) / 'ตัว ฉาง สือเจียน?' (นานแค่ไหน)",
+        ans: "我学过汉语，学了半年了。",
+        ansPin: "Wǒ xuéguò Hànyǔ, xué le bàn nián le.",
+        ansThai: "🗣️ อ่านว่า: หว่อ เสวีย-กั้ว ฮั่น-ยวี่, เสวีย เลอ ปั้น เหนียน เลอ",
+        ansTrans: "ผมเคยเรียนภาษาจีนครับ เรียนมาได้ครึ่งปีแล้วครับ"
+      },
+      {
+        id: 12,
+        lesson: 9,
+        q: "泰国/清莱/曼谷有什么好玩儿的地方？",
+        qPin: "Qīnglái / Màngǔ yǒu shénme hǎowánr de dìfang?",
+        qThai: "🗣️ อ่านว่า: ชิงไหล / ม่านกู่ โหย่ว เสินเมอ ห่าว-หวาน-เตอะ ตี้-ฟาง?",
+        qTrans: "ที่เชียงราย / กรุงเทพฯ / เมืองไทย มีสถานที่ไหนเที่ยวสนุกบ้าง?",
+        trigger: "好玩儿的地方？ (hǎowánr de dìfang?)",
+        triggerThai: "ได้ยิน: 'ห่าว-หวาน-เตอะ ตี้-ฟาง?' แปลว่า สถานที่เที่ยวสนุก",
+        ans: "清莱有白庙，很好玩儿。",
+        ansPin: "Qīnglái yǒu Báimiào, hěn hǎowánr.",
+        ansThai: "🗣️ อ่านว่า: ชิง-ไหล โหย่ว ป๋าย-เมี่ยว, เหิ่น ห่าว-หวาน",
+        ansTrans: "เชียงรายมีวัดร่องขุ่น เที่ยวสนุกมากครับ"
+      },
+      {
+        id: 13,
+        lesson: 10,
+        q: "你要出国旅行吗？东西收拾好了吗？",
+        qPin: "Nǐ yào chūguó lǚxíng ma? Dōngxi shōushi hǎo le ma?",
+        qThai: "🗣️ อ่านว่า: หนี่ เย่า ชูกั๋ว ลวี่สิง มา? / ตงซี โซวสือ ห่าว เลอ มา?",
+        qTrans: "คุณจะไปเที่ยวต่างประเทศใช่ไหม? จัดเก็บของเสร็จเรียบร้อยหรือยัง?",
+        trigger: "出国旅行？ / 收拾好了吗？",
+        triggerThai: "ได้ยิน: 'ชู-กั๋ว ลวี่-สิง?' (ไปเที่ยวตปท.) / 'โซว-สือ ห่าว เลอ มา?' (จัดของยัง)",
+        ans: "是的，我要出国旅行，东西已经收拾好了。",
+        ansPin: "Shì de, wǒ yào chūguó lǚxíng, dōngxi yǐjīng shōushi hǎo le.",
+        ansThai: "🗣️ อ่านว่า: ซื่อ เตอะ, หว่อ เย่า ชู-กั๋ว ลวี่-สิง, ตง-ซี อี่-จิง โซว-สือ ห่าว เลอ",
+        ansTrans: "ใช่ครับ ผมจะไปเที่ยวต่างประเทศ ของจัดเสร็จเรียบร้อยแล้วครับ"
+      },
+      {
+        id: 14,
+        lesson: 10,
+        q: "你的签证办好了没有？请问在几号登机口登机？",
+        qPin: "Nǐ de qiānzhèng bàn hǎo le méiyǒu? Zài jǐ hào dēngjīkǒu dēngjī?",
+        qThai: "🗣️ อ่านว่า: ...เชียนเจิ้ง ปั้น ห่าว เลอ เหมยโหย่ว? / ...จี่ ห้าว เติงจีโข่ว?",
+        qTrans: "วีซ่าของคุณทำเสร็จหรือยัง? ขอถามหน่อยว่าขึ้นเครื่องที่เกท (Gate) ไหน?",
+        trigger: "办好了没有？ / 登机口？",
+        triggerThai: "ได้ยิน: 'ปั้น ห่าว เลอ เหมยโหย่ว?' (เสร็จยัง) / 'เติง-จี-โข่ว?' (เกทไหน)",
+        ans: "签证已经办好了，在六A登机口登机。",
+        ansPin: "Qiānzhèng yǐjīng bàn hǎo le, zài liù-A dēngjīkǒu dēngjī.",
+        ansThai: "🗣️ อ่านว่า: เชียน-เจิ้ง อี่-จิง ปั้น ห่าว เลอ, ไจ้ ลิ่ว-เอ เติง-จี-โข่ว เติง-จี",
+        ansTrans: "วีซ่าทำเสร็จแล้วครับ ขึ้นเครื่องที่ประตู 6A ครับ"
+      },
+      {
+        id: 15,
+        lesson: 9,
+        q: "你多大？多高？多重？",
+        qPin: "Nǐ duō dà? Duō gāo? Duō zhòng?",
+        qThai: "🗣️ อ่านว่า: หนี่ ตัว ต้า? / หนี่ ตัว เกา? / หนี่ ตัว จ้ง?",
+        qTrans: "คุณอายุเท่าไหร่? สูงเท่าไหร่? น้ำหนักเท่าไหร่?",
+        trigger: "多大 / 多高 / 多重",
+        triggerThai: "ได้ยิน: ตัว ต้า? (อายุ) / ตัว เกา? (สูง) / ตัว จ้ง? (หนัก)",
+        ans: "我二十岁，一米七五，六十公斤。",
+        ansPin: "Wǒ èrshí suì, yī mǐ qī wǔ, liùshí gōngjīn.",
+        ansThai: "🗣️ อ่านว่า: หว่อ เอ้อร์-สือ ซุ่ย, อี้ หมี่ ชี อู่, ลิ่ว-สือ กง-จิน",
+        ansTrans: "ผมอายุ 20 ปี, สูง 175 ซม., หนัก 60 กก. ครับ"
+      },
+      {
+        id: 16,
+        lesson: 10,
+        q: "你吃饭/做作业/看书了没有？",
+        qPin: "Nǐ chīfàn / zuò zuòyè / kàn shū le méiyǒu?",
+        qThai: "🗣️ อ่านว่า: หนี่ ชือฟั่น / จั้ว จั้วเย่ / คั่น ซู เลอ เหมยโหย่ว?",
+        qTrans: "คุณกินข้าว / ทำการบ้าน / อ่านหนังสือ แล้วหรือยัง?",
+        trigger: "...了没有？ (le méiyǒu?)",
+        triggerThai: "ได้ยิน: '...เลอ เหมย-โหย่ว?' แปลว่า ...แล้วหรือยัง",
+        ans: "还没呢。",
+        ansPin: "Hái méi ne.",
+        ansThai: "🗣️ อ่านว่า: ไห เหมย เนอ",
+        ansTrans: "ยังเลยครับ"
+      }
+    ];
+
+    const VOCAB = [
+      { id: 1, l: 'L6', han: '从', pin: 'cóng', thai: 'ฉง', en: 'จาก (From)' },
+      { id: 2, l: 'L6', han: '往', pin: 'wǎng', thai: 'หว่าง', en: 'ไปทาง (Toward)' },
+      { id: 3, l: 'L6', han: '拐', pin: 'guǎi', thai: 'กวั่ย', en: 'เลี้ยว (Turn)' },
+      { id: 4, l: 'L6', han: '一直', pin: 'yīzhí', thai: 'อี้จื๋อ', en: 'ตรงไป (Straight)' },
+      { id: 5, l: 'L6', han: '红绿灯', pin: 'hónglǜdēng', thai: 'หงลวี่เติง', en: 'ไฟแดง (Traffic light)' },
+      { id: 6, l: 'L6', han: '十字路口', pin: 'shízìlùkǒu', thai: 'สือจื้อลู่โข่ว', en: 'สี่แยก (Crossroad)' },
+
+      { id: 7, l: 'L7', han: '疼', pin: 'téng', thai: 'เถิง', en: 'ปวด/เจ็บ (Painful)' },
+      { id: 8, l: 'L7', han: '嗓子', pin: 'sǎngzi', thai: 'สั่งจึ', en: 'ลำคอ (Throat)' },
+      { id: 9, l: 'L7', han: '咱们', pin: 'zánmen', thai: 'จ๋านเมิน', en: 'พวกเรา (We/Us)' },
+      { id: 10, l: 'L7', han: '打针', pin: 'dǎzhēn', thai: 'ต๋าเจิน', en: 'ฉีดยา (Injection)' },
+      { id: 11, l: 'L7', han: '住院', pin: 'zhùyuàn', thai: 'จู้เยวิ่น', en: 'นอน รพ. (Hospitalized)' },
+      { id: 12, l: 'L7', han: '手续', pin: 'shǒuxù', thai: 'โส่วซวี่', en: 'ขั้นตอน/เอกสาร (Formalities)' },
+
+      { id: 13, l: 'L8', han: '才', pin: 'cái', thai: 'ฉาย', en: 'ถึงจะ/เพิ่ง (ช้ากว่าคิด)' },
+      { id: 14, l: 'L8', han: '就', pin: 'jiù', thai: 'จิ้ว', en: 'ก็/เร็ว (เร็วกว่าคิด)' },
+      { id: 15, l: 'L8', han: '斤', pin: 'jīn', thai: 'จิน', en: 'ครึ่ง กก. (500g)' },
+      { id: 16, l: 'L8', han: '尝尝', pin: 'chángchang', thai: 'ฉางฉาง', en: 'ชิมดู (To taste)' },
+      { id: 17, l: 'L8', han: '味道', pin: 'wèidào', thai: 'เว่ยเต้า', en: 'รสชาติ (Flavor)' },
+      { id: 18, l: 'L8', han: '日用品', pin: 'rìyòngpǐn', thai: 'ยรื่อโย่งผิ่น', en: 'ของใช้ประจำวัน' },
+
+      { id: 19, l: 'L9', han: '另外', pin: 'lìngwài', thai: 'ลิ่งว่าย', en: 'นอกจากนี้ (Besides)' },
+      { id: 20, l: 'L9', han: '应该', pin: 'yīnggāi', thai: 'อิงกาย', en: 'ควรจะ (Should)' },
+      { id: 21, l: 'L9', han: '机会', pin: 'jīhuì', thai: 'จีฮุ่ย', en: 'โอกาส (Opportunity)' },
+      { id: 22, l: 'L9', han: '逛逛', pin: 'guàngguang', thai: 'กว้างกว้าง', en: 'เดินเล่น (Stroll)' },
+      { id: 23, l: 'L9', han: '多久', pin: 'duōjiǔ', thai: 'ตัวจิ่ว', en: 'นานแค่ไหน (How long)' },
+      { id: 24, l: 'L9', han: '出国', pin: 'chūguó', thai: 'ชูกั๋ว', en: 'ไปต่างประเทศ (Abroad)' },
+
+      { id: 25, l: 'L10', han: '登机', pin: 'dēngjī', thai: 'เติงจี', en: 'ขึ้นเครื่องบิน (Board)' },
+      { id: 26, l: 'L10', han: '旅行', pin: 'lǚxíng', thai: 'ลวี่สิง', en: 'ท่องเที่ยว (Travel)' },
+      { id: 27, l: 'L10', han: '朋友', pin: 'péngyou', thai: 'เผิงโหย่ว', en: 'เพื่อน (Friend)' },
+      { id: 28, l: 'L10', han: '时间', pin: 'shíjiān', thai: 'สือเจียน', en: 'เวลา (Time)' },
+      { id: 29, l: 'L10', han: '收拾', pin: 'shōushi', thai: 'โซวสือ', en: 'เก็บของ/จัด (Pack)' },
+      { id: 30, l: 'L10', han: '行李箱', pin: 'xínglǐxiāng', thai: 'สิงหลี่เซียง', en: 'กระเป๋าเดินทาง (Luggage)' }
+    ];
+
+    let activeAudio = null;
+
+    function playAudio(filename, textFallback) {
+      if (activeAudio) {
+        activeAudio.pause();
+        activeAudio.currentTime = 0;
+      }
+      
+      const audio = new Audio('audio/' + filename + '.mp3');
+      activeAudio = audio;
+
+      audio.play().catch(() => {
+        const fallbackUrl = 'https://translate.google.com/translate_tts?ie=UTF-8&tl=zh-CN&client=tw-ob&q=' + encodeURIComponent(textFallback);
+        const onlineAudio = new Audio(fallbackUrl);
+        activeAudio = onlineAudio;
+        onlineAudio.play().catch(() => {
+          if (window.speechSynthesis) {
+            const u = new SpeechSynthesisUtterance(textFallback);
+            u.lang = 'zh-CN';
+            window.speechSynthesis.speak(u);
+          }
+        });
+      });
+    }
+
+    let currentIndex = 0;
+
+    function renderFocus(idx) {
+      const item = QUESTIONS[idx];
+      document.getElementById('f-lesson').innerText = `Lesson ${item.lesson}`;
+      document.getElementById('f-num').innerText = `${String(item.id).padStart(2, '0')} / 16`;
+      
+      document.getElementById('f-question').innerText = item.q;
+      document.getElementById('f-q-pin').innerText = item.qPin;
+      document.getElementById('f-q-thai').innerText = item.qThai;
+      document.getElementById('f-q-trans').innerHTML = `<strong>💬 แปล:</strong> ${item.qTrans}`;
+
+      document.getElementById('f-trigger').innerText = item.trigger;
+      document.getElementById('f-trigger-thai').innerText = item.triggerThai;
+
+      document.getElementById('f-ans').innerText = item.ans;
+      document.getElementById('f-ans-pin').innerText = item.ansPin;
+      document.getElementById('f-ans-thai').innerText = item.ansThai;
+      document.getElementById('f-ans-trans').innerHTML = `<strong>💬 แปล:</strong> ${item.ansTrans}`;
+    }
+
+    function playQuestion() {
+      const item = QUESTIONS[currentIndex];
+      playAudio('q' + item.id, item.q);
+    }
+
+    function playTrigger() {
+      const item = QUESTIONS[currentIndex];
+      playAudio('t' + item.id, item.trigger);
+    }
+
+    function playAnswer() {
+      const item = QUESTIONS[currentIndex];
+      playAudio('a' + item.id, item.ans);
+    }
+
+    function nextCard() {
+      currentIndex = (currentIndex + 1) % QUESTIONS.length;
+      renderFocus(currentIndex);
+    }
+
+    function prevCard() {
+      currentIndex = (currentIndex - 1 + QUESTIONS.length) % QUESTIONS.length;
+      renderFocus(currentIndex);
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (document.getElementById('view-focus').classList.contains('hidden')) return;
+      if (e.code === 'Space') {
+        e.preventDefault();
+        playQuestion();
+      } else if (e.code === 'Enter') {
+        e.preventDefault();
+        playAnswer();
+      } else if (e.code === 'ArrowRight') {
+        nextCard();
+      } else if (e.code === 'ArrowLeft') {
+        prevCard();
+      }
+    });
+
+    function setTab(tab) {
+      ['focus', 'sheet', 'vocab'].forEach(t => {
+        const view = document.getElementById('view-' + t);
+        const btn = document.getElementById('tab-' + t);
+        if (t === tab) {
+          view.classList.remove('hidden');
+          btn.classList.add('active');
+        } else {
+          view.classList.add('hidden');
+          btn.classList.remove('active');
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderSheet() {
+      const container = document.getElementById('view-sheet');
+      container.innerHTML = QUESTIONS.map(q => `
+        <div class="list-row">
+          <div class="list-num">Q${q.id}</div>
+          <div class="col-q">
+            <p class="zh">${q.q}</p>
+            <div class="trans-mini">💬 ${q.qTrans}</div>
+            <div class="read-mini">${q.qThai}</div>
+            <button class="audio-btn" style="margin-top:6px; padding:4px 8px; font-size:11px;" onclick="playAudio('q${q.id}', '${q.q}')">🔊 ฟังคำถาม</button>
+          </div>
+          <div class="col-a">
+            <p class="zh">${q.ans}</p>
+            <div class="trans-mini">💬 ${q.ansTrans}</div>
+            <div class="read-mini">${q.ansThai}</div>
+            <button class="audio-btn success" style="margin-top:6px; padding:4px 8px; font-size:11px;" onclick="playAudio('a${q.id}', '${q.ans}')">🔊 ฟังคำตอบ</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderVocab() {
+      const container = document.getElementById('view-vocab');
+      container.innerHTML = VOCAB.map(v => `
+        <div class="vocab-card" onclick="playAudio('v${v.id}', '${v.han}')">
+          <div class="vocab-zh zh">${v.han}</div>
+          <div class="vocab-pin">${v.pin}</div>
+          <div class="vocab-th">${v.thai}</div>
+          <div class="vocab-en">${v.en}</div>
+        </div>
+      `).join('');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderFocus(0);
+      renderSheet();
+      renderVocab();
+    });
+  </script>
+</body>
+</html>
