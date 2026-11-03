@@ -614,6 +614,7 @@
 
     <nav>
       <button class="tab-btn active" onclick="setTab('focus')" id="tab-focus">Focus</button>
+      <button class="tab-btn" onclick="setTab('hacks')" id="tab-hacks">⚡ 5 Hacks</button>
       <button class="tab-btn" onclick="setTab('loops')" id="tab-loops">🎧 Loops (3)</button>
       <button class="tab-btn" onclick="setTab('sheet')" id="tab-sheet">Sheet</button>
       <button class="tab-btn" onclick="setTab('vocab')" id="tab-vocab">Vocab (30)</button>
@@ -701,7 +702,105 @@
       </div>
     </div>
 
-    <!-- VIEW 2: AUDIO LOOPS -->
+    <!-- VIEW 2: 5 UNIVERSAL HACKS -->
+    <div id="view-hacks" class="hidden" style="display:flex; flex-direction:column; gap:16px;">
+      
+      <div style="background:var(--accent-bg); border:1px solid var(--accent-border); border-radius:14px; padding:18px 20px;">
+        <h3 style="font-size:16px; font-weight:700; color:var(--accent); margin-bottom:4px;">⚡ 5 Universal Master Answers (สูตร 5 คำตอบคุมเกือบทุกข้อ)</h3>
+        <p style="font-size:12px; color:var(--text-muted); line-height:1.5;">
+          ถ้าจำทั้ง 16 ข้อไม่ทัน ให้จำแค่ <strong>5 โครงสร้างคำตอบครอบจักรวาล</strong> ด้านล่างนี้ ได้ยินเสียง keyword ให้ยิงคำตอบตามกลุ่มทันที!
+        </p>
+      </div>
+
+      <!-- HACK 1 -->
+      <div class="focus-card" style="padding:24px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="font-size:12px; font-weight:700; color:#ef4444; background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.2); padding:2px 8px; border-radius:6px;">Hack 1 • คำตอบครอบจักรวาล</span>
+          <span style="font-size:11px; font-family:monospace; color:var(--text-muted);">คุม 3 ข้อ (Q13, Q14, Q16)</span>
+        </div>
+        <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">👂 ได้ยินเสียงคำถามลงท้ายด้วย:</div>
+        <div style="font-size:15px; font-weight:600; color:#fff; margin-bottom:10px;">...了没有？ (le méiyǒu) / 好了吗？ (เสร็จหรือยัง)</div>
+        <div class="ans-box" style="padding:16px;">
+          <div class="section-label">🗣️ ตอบคำเดียวจบ:</div>
+          <div class="ans-text zh" style="font-size:22px;">还没呢。</div>
+          <div class="ans-pinyin">Hái méi ne. (ไห เหมย เนอ)</div>
+          <div class="ans-trans-line"><strong>💬 แปล:</strong> ยังเลยครับ</div>
+          <button class="audio-btn success" style="margin-top:8px; padding:6px 12px;" onclick="playAudio('a16', '还没呢')">🔊 ฟังเสียงตอบ</button>
+        </div>
+      </div>
+
+      <!-- HACK 2 -->
+      <div class="focus-card" style="padding:24px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="font-size:12px; font-weight:700; color:var(--accent); background:var(--accent-bg); border:1px solid var(--accent-border); padding:2px 8px; border-radius:6px;">Hack 2 • ไปไหนทำอะไร</span>
+          <span style="font-size:11px; font-family:monospace; color:var(--text-muted);">คุม 2 ข้อ (Q2, Q6)</span>
+        </div>
+        <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">👂 ได้ยินเสียง:</div>
+        <div style="font-size:15px; font-weight:600; color:#fff; margin-bottom:10px;">去哪儿？ (qù nǎr) / 做什么？ (zuò shénme) / 昨天 (zuótiān)</div>
+        <div class="ans-box" style="padding:16px;">
+          <div class="section-label">🗣️ ตอบว่า:</div>
+          <div class="ans-text zh" style="font-size:22px;">去超市买东西。</div>
+          <div class="ans-pinyin">Qù chāoshì mǎi dōngxi. (ชวี่ ชาว-ซื่อ หม่าย ตง-ซี)</div>
+          <div class="ans-trans-line"><strong>💬 แปล:</strong> ไปซื้อของที่ซูเปอร์มาเก็ตครับ</div>
+          <button class="audio-btn success" style="margin-top:8px; padding:6px 12px;" onclick="playAudio('a6', '我去超市买东西了')">🔊 ฟังเสียงตอบ</button>
+        </div>
+      </div>
+
+      <!-- HACK 3 -->
+      <div class="focus-card" style="padding:24px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="font-size:12px; font-weight:700; color:#38bdf8; background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.2); padding:2px 8px; border-radius:6px;">Hack 3 • ให้เลือก A หรือ B</span>
+          <span style="font-size:11px; font-family:monospace; color:var(--text-muted);">คุม 2 ข้อ (Q7, Q9)</span>
+        </div>
+        <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">👂 ได้ยินเสียง:</div>
+        <div style="font-size:15px; font-weight:600; color:#fff; margin-bottom:10px;">还是 (háishi = หรือว่า) ➔ ให้ทวนตัวเลือกแรกแล้วเติม "我要" ข้างหน้า</div>
+        <div class="ans-box" style="padding:16px;">
+          <div class="section-label">🗣️ ตัวอย่างประโยคตอบ:</div>
+          <div class="ans-text zh" style="font-size:20px;">我要坐车去。 / 我要看中国电影。</div>
+          <div class="ans-pinyin">Wǒ yào zuò chē qù. / Wǒ yào kàn Zhōngguó diànyǐng.</div>
+          <div class="ans-trans-line"><strong>💬 แปล:</strong> ผมจะนั่งรถไปครับ / ผมอยากดูหนังจีนครับ</div>
+          <button class="audio-btn success" style="margin-top:8px; padding:6px 12px;" onclick="playAudio('a9', '我要看中国电影')">🔊 ฟังเสียงตอบ</button>
+        </div>
+      </div>
+
+      <!-- HACK 4 -->
+      <div class="focus-card" style="padding:24px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="font-size:12px; font-weight:700; color:var(--green); background:var(--green-bg); border:1px solid var(--green-border); padding:2px 8px; border-radius:6px;">Hack 4 • ของกิน vs เที่ยว</span>
+          <span style="font-size:11px; font-family:monospace; color:var(--text-muted);">คุม 4 ข้อ (Q8, Q10, Q11, Q12)</span>
+        </div>
+        <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">👂 ได้ยินเกี่ยวกับอาหาร หรือ สถานที่:</div>
+        <div style="font-size:14px; font-weight:600; color:#fff; margin-bottom:10px;">吃过 (chīguò) / 味道 (wèidào) VS 去过 (qùguò) / 好玩儿 (hǎowánr)</div>
+        <div class="ans-box" style="padding:16px;">
+          <div class="section-label">🗣️ อาหารตอบ:</div>
+          <div class="ans-text zh" style="font-size:20px;">我吃过，很好吃！</div>
+          <div class="ans-pinyin">Wǒ chīguò, hěn hǎochī! (เคยกิน อร่อยมาก)</div>
+          <div class="section-label" style="margin-top:10px;">🗣️ เที่ยวตอบ:</div>
+          <div class="ans-text zh" style="font-size:20px;">我去过，很好玩儿！</div>
+          <div class="ans-pinyin">Wǒ qùguò, hěn hǎowánr! (เคยไป สนุกมาก)</div>
+          <button class="audio-btn success" style="margin-top:8px; padding:6px 12px;" onclick="playAudio('a11', '我吃过很好吃')">🔊 ฟังเสียงตอบ</button>
+        </div>
+      </div>
+
+      <!-- HACK 5 -->
+      <div class="focus-card" style="padding:24px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="font-size:12px; font-weight:700; color:#eab308; background:rgba(234,179,8,0.1); border:1px solid rgba(234,179,8,0.2); padding:2px 8px; border-radius:6px;">Hack 5 • ตัวเลขถามระยะเวลา & ขนาด</span>
+          <span style="font-size:11px; font-family:monospace; color:var(--text-muted);">คุม 4 ข้อ (Q3, Q10, Q11, Q15)</span>
+        </div>
+        <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">👂 ได้ยินคำว่า:</div>
+        <div style="font-size:14px; font-weight:600; color:#fff; margin-bottom:10px;">多久 (duōjiǔ) / 多长时间 (duō cháng shíjiān) / 有多远 (duō yuǎn) / 多大 (duō dà)</div>
+        <div class="ans-box" style="padding:16px;">
+          <div class="section-label">🗣️ ตอบตัวเลขสั้นๆ:</div>
+          <div class="ans-text zh" style="font-size:18px;">两个月了 (2 เดือน) • 五百米 (500 เมตร) • 二十岁 (20 ปี)</div>
+          <div class="ans-pinyin">Liǎng gè yuè le • Wǔbǎi mǐ • Èrshí suì</div>
+          <button class="audio-btn success" style="margin-top:8px; padding:6px 12px;" onclick="playAudio('a10', '我来清莱两个月了')">🔊 ฟังเสียงตอบ</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- VIEW 3: AUDIO LOOPS -->
     <div id="view-loops" class="hidden">
       
       <!-- LOOP 1: FULL QUESTION & ANSWER -->
@@ -1134,7 +1233,7 @@
     });
 
     function setTab(tab) {
-      ['focus', 'loops', 'sheet', 'vocab'].forEach(t => {
+      ['focus', 'hacks', 'loops', 'sheet', 'vocab'].forEach(t => {
         const view = document.getElementById('view-' + t);
         const btn = document.getElementById('tab-' + t);
         if (t === tab) {
