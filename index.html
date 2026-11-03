@@ -706,17 +706,17 @@
     <div id="view-hacks" class="hidden" style="display:flex; flex-direction:column; gap:16px;">
       
       <div style="background:var(--accent-bg); border:1px solid var(--accent-border); border-radius:14px; padding:18px 20px;">
-        <h3 style="font-size:16px; font-weight:700; color:var(--accent); margin-bottom:4px;">⚡ 5 Universal Master Answers (สูตร 5 คำตอบคุมเกือบทุกข้อ)</h3>
+        <h3 style="font-size:16px; font-weight:700; color:var(--accent); margin-bottom:4px;">⚡ 5 Universal Master Answers (สูตร 5 คำตอบคุมครบ 16 ข้อ)</h3>
         <p style="font-size:12px; color:var(--text-muted); line-height:1.5;">
-          ถ้าจำทั้ง 16 ข้อไม่ทัน ให้จำแค่ <strong>5 โครงสร้างคำตอบครอบจักรวาล</strong> ด้านล่างนี้ ได้ยินเสียง keyword ให้ยิงคำตอบตามกลุ่มทันที!
+          ถ้าจำทั้ง 16 ข้อไม่ทัน ให้จำแค่ <strong>5 โครงสร้างคำตอบครอบจักรวาล + 3 ข้อสั้น</strong> ด้านล่างนี้ ได้ยินคีย์เวิร์ดท้ายประโยคให้ยิงคำตอบทันที! มีปุ่มกดฟังเสียงคำถามแต่ละข้อให้เทียบได้เลย
         </p>
       </div>
 
       <!-- HACK 1 -->
-      <div class="focus-card" style="padding:24px;">
+      <div class="focus-card" style="padding:22px;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
           <span style="font-size:12px; font-weight:700; color:#ef4444; background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.2); padding:2px 8px; border-radius:6px;">Hack 1 • คำตอบครอบจักรวาล</span>
-          <span style="font-size:11px; font-family:monospace; color:var(--text-muted);">คุม 3 ข้อ (Q13, Q14, Q16)</span>
+          <span style="font-size:11px; font-family:monospace; color:var(--text-muted); font-weight:600;">คุม 3 ข้อ (Q13, Q14, Q16)</span>
         </div>
         <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">👂 ได้ยินเสียงคำถามลงท้ายด้วย:</div>
         <div style="font-size:15px; font-weight:600; color:#fff; margin-bottom:10px;">...了没有？ (le méiyǒu) / 好了吗？ (เสร็จหรือยัง)</div>
@@ -727,13 +727,43 @@
           <div class="ans-trans-line"><strong>💬 แปล:</strong> ยังเลยครับ</div>
           <button class="audio-btn success" style="margin-top:8px; padding:6px 12px;" onclick="playAudio('a16', '还没呢')">🔊 ฟังเสียงตอบ</button>
         </div>
+        <!-- Question list for Hack 1 -->
+        <div style="margin-top:14px; padding-top:12px; border-top:1px dashed var(--border);">
+          <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">📋 ข้อสอบที่ใช้สูตรนี้ตอบได้ทันที:</div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:#ef4444; margin-right:6px;">Q13</span>
+                <span class="zh" style="font-weight:500;">你作业做完了没有？</span>
+                <div style="font-size:11px; color:var(--text-muted);">การบ้านคุณทำเสร็จหรือยัง?</div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q13', '你作业做完了没有')">🔊 ฟัง Q13</button>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:#ef4444; margin-right:6px;">Q14</span>
+                <span class="zh" style="font-weight:500;">你去过中国没有？</span>
+                <div style="font-size:11px; color:var(--text-muted);">คุณเคยไปประเทศจีนหรือยัง?</div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q14', '你去过中国没有')">🔊 ฟัง Q14</button>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:#ef4444; margin-right:6px;">Q16</span>
+                <span class="zh" style="font-weight:500;">你准备好了吗？</span>
+                <div style="font-size:11px; color:var(--text-muted);">คุณเตรียมตัวพร้อมหรือยัง?</div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q16', '你准备好了吗')">🔊 ฟัง Q16</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- HACK 2 -->
-      <div class="focus-card" style="padding:24px;">
+      <div class="focus-card" style="padding:22px;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
           <span style="font-size:12px; font-weight:700; color:var(--accent); background:var(--accent-bg); border:1px solid var(--accent-border); padding:2px 8px; border-radius:6px;">Hack 2 • ไปไหนทำอะไร</span>
-          <span style="font-size:11px; font-family:monospace; color:var(--text-muted);">คุม 2 ข้อ (Q2, Q6)</span>
+          <span style="font-size:11px; font-family:monospace; color:var(--text-muted); font-weight:600;">คุม 2 ข้อ (Q2, Q6)</span>
         </div>
         <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">👂 ได้ยินเสียง:</div>
         <div style="font-size:15px; font-weight:600; color:#fff; margin-bottom:10px;">去哪儿？ (qù nǎr) / 做什么？ (zuò shénme) / 昨天 (zuótiān)</div>
@@ -744,49 +774,131 @@
           <div class="ans-trans-line"><strong>💬 แปล:</strong> ไปซื้อของที่ซูเปอร์มาเก็ตครับ</div>
           <button class="audio-btn success" style="margin-top:8px; padding:6px 12px;" onclick="playAudio('a6', '我去超市买东西了')">🔊 ฟังเสียงตอบ</button>
         </div>
+        <!-- Question list for Hack 2 -->
+        <div style="margin-top:14px; padding-top:12px; border-top:1px dashed var(--border);">
+          <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">📋 ข้อสอบที่ใช้สูตรนี้ตอบได้ทันที:</div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:var(--accent); margin-right:6px;">Q2</span>
+                <span class="zh" style="font-weight:500;">下课以后，你要去哪儿？要做什么？</span>
+                <div style="font-size:11px; color:var(--text-muted);">หลังเลิกเรียนจะไปไหน จะทำอะไร?</div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q2', '下课以后你要去哪儿你要做什么')">🔊 ฟัง Q2</button>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:var(--accent); margin-right:6px;">Q6</span>
+                <span class="zh" style="font-weight:500;">昨天你去哪儿了？做什么了？</span>
+                <div style="font-size:11px; color:var(--text-muted);">เมื่อวานคุณไปไหนมา ทำอะไรมา?</div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q6', '昨天你去哪儿了做什么了')">🔊 ฟัง Q6</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- HACK 3 -->
-      <div class="focus-card" style="padding:24px;">
+      <div class="focus-card" style="padding:22px;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-          <span style="font-size:12px; font-weight:700; color:#38bdf8; background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.2); padding:2px 8px; border-radius:6px;">Hack 3 • ให้เลือก A หรือ B</span>
-          <span style="font-size:11px; font-family:monospace; color:var(--text-muted);">คุม 2 ข้อ (Q7, Q9)</span>
+          <span style="font-size:12px; font-weight:700; color:#38bdf8; background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.2); padding:2px 8px; border-radius:6px;">Hack 3 • ให้เลือก A หรือ B (还是)</span>
+          <span style="font-size:11px; font-family:monospace; color:var(--text-muted); font-weight:600;">คุม 2 ข้อ (Q7, Q9)</span>
         </div>
         <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">👂 ได้ยินเสียง:</div>
-        <div style="font-size:15px; font-weight:600; color:#fff; margin-bottom:10px;">还是 (háishi = หรือว่า) ➔ ให้ทวนตัวเลือกแรกแล้วเติม "我要" ข้างหน้า</div>
+        <div style="font-size:15px; font-weight:600; color:#fff; margin-bottom:10px;">还是 (háishi = หรือว่า) ➔ ทวนตัวเลือกแรกแล้วเติม "我要..." ข้างหน้า</div>
         <div class="ans-box" style="padding:16px;">
-          <div class="section-label">🗣️ ตัวอย่างประโยคตอบ:</div>
-          <div class="ans-text zh" style="font-size:20px;">我要坐车去。 / 我要看中国电影。</div>
-          <div class="ans-pinyin">Wǒ yào zuò chē qù. / Wǒ yào kàn Zhōngguó diànyǐng.</div>
-          <div class="ans-trans-line"><strong>💬 แปล:</strong> ผมจะนั่งรถไปครับ / ผมอยากดูหนังจีนครับ</div>
+          <div class="section-label">🗣️ โครงสร้างคำตอบ:</div>
+          <div class="ans-text zh" style="font-size:20px;">我要 + [ตัวเลือกแรก]</div>
+          <div class="ans-pinyin">Wǒ yào + [Option A] (หว่อ เย่า + ...)</div>
+          <div class="ans-trans-line"><strong>💬 แปล:</strong> ผมจะ/ผมอยาก [เลือกอย่างแรก] ครับ</div>
           <button class="audio-btn success" style="margin-top:8px; padding:6px 12px;" onclick="playAudio('a9', '我要看中国电影')">🔊 ฟังเสียงตอบ</button>
+        </div>
+        <!-- Question list for Hack 3 -->
+        <div style="margin-top:14px; padding-top:12px; border-top:1px dashed var(--border);">
+          <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">📋 ข้อสอบที่ใช้สูตรนี้ตอบได้ทันที:</div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:#38bdf8; margin-right:6px;">Q7</span>
+                <span class="zh" style="font-weight:500;">你想坐飞机去还是坐火车去？</span>
+                <div style="font-size:11px; color:var(--text-muted);">อยากนั่งเครื่องบินหรือนั่งรถไฟไป? ➔ ตอบ: <strong>我要坐飞机去。</strong></div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q7', '你想坐飞机去还是坐火车去')">🔊 ฟัง Q7</button>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:#38bdf8; margin-right:6px;">Q9</span>
+                <span class="zh" style="font-weight:500;">你要看中国电影还是美国电影？</span>
+                <div style="font-size:11px; color:var(--text-muted);">อยากดูหนังจีนหรือหนังอเมริกา? ➔ ตอบ: <strong>我要看中国电影。</strong></div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q9', '你要看中国电影还是美国电影')">🔊 ฟัง Q9</button>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- HACK 4 -->
-      <div class="focus-card" style="padding:24px;">
+      <div class="focus-card" style="padding:22px;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
           <span style="font-size:12px; font-weight:700; color:var(--green); background:var(--green-bg); border:1px solid var(--green-border); padding:2px 8px; border-radius:6px;">Hack 4 • ของกิน vs เที่ยว</span>
-          <span style="font-size:11px; font-family:monospace; color:var(--text-muted);">คุม 4 ข้อ (Q8, Q10, Q11, Q12)</span>
+          <span style="font-size:11px; font-family:monospace; color:var(--text-muted); font-weight:600;">คุม 4 ข้อ (Q8, Q10, Q11, Q12)</span>
         </div>
         <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">👂 ได้ยินเกี่ยวกับอาหาร หรือ สถานที่:</div>
-        <div style="font-size:14px; font-weight:600; color:#fff; margin-bottom:10px;">吃过 (chīguò) / 味道 (wèidào) VS 去过 (qùguò) / 好玩儿 (hǎowánr)</div>
+        <div style="font-size:14px; font-weight:600; color:#fff; margin-bottom:10px;">吃过 (chīguò) / 味道 (wèidào) VS 去过 (qùguò) / 怎么样 (zěnmeyàng)</div>
         <div class="ans-box" style="padding:16px;">
-          <div class="section-label">🗣️ อาหารตอบ:</div>
+          <div class="section-label">🗣️ อาหารถาม ➔ ตอบ:</div>
           <div class="ans-text zh" style="font-size:20px;">我吃过，很好吃！</div>
-          <div class="ans-pinyin">Wǒ chīguò, hěn hǎochī! (เคยกิน อร่อยมาก)</div>
-          <div class="section-label" style="margin-top:10px;">🗣️ เที่ยวตอบ:</div>
+          <div class="ans-pinyin">Wǒ chīguò, hěn hǎochī! (หว่อ ชือ กั้ว, เหิ่น ห่าวชือ)</div>
+          <div class="section-label" style="margin-top:10px;">🗣️ เที่ยว/สถานที่ถาม ➔ ตอบ:</div>
           <div class="ans-text zh" style="font-size:20px;">我去过，很好玩儿！</div>
-          <div class="ans-pinyin">Wǒ qùguò, hěn hǎowánr! (เคยไป สนุกมาก)</div>
+          <div class="ans-pinyin">Wǒ qùguò, hěn hǎowánr! (หว่อ ชวี่ กั้ว, เหิ่น ห่าวหว่าน)</div>
           <button class="audio-btn success" style="margin-top:8px; padding:6px 12px;" onclick="playAudio('a11', '我吃过很好吃')">🔊 ฟังเสียงตอบ</button>
+        </div>
+        <!-- Question list for Hack 4 -->
+        <div style="margin-top:14px; padding-top:12px; border-top:1px dashed var(--border);">
+          <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">📋 ข้อสอบที่ใช้สูตรนี้ตอบได้ทันที:</div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:var(--green); margin-right:6px;">Q8</span>
+                <span class="zh" style="font-weight:500;">你吃过北京烤鸭吗？味道怎么样？</span>
+                <div style="font-size:11px; color:var(--text-muted);">เคยกินเป็ดปักกิ่งไหม รสชาติเป็นไง? ➔ <strong>我吃过，很好吃！</strong></div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q8', '你吃过北京烤鸭吗味道怎么样')">🔊 ฟัง Q8</button>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:var(--green); margin-right:6px;">Q10</span>
+                <span class="zh" style="font-weight:500;">...去过哪儿？</span>
+                <div style="font-size:11px; color:var(--text-muted);">...เคยไปเที่ยวที่ไหนบ้าง? ➔ <strong>我去过白庙，很好玩儿！</strong></div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q10', '你来清莱多长时间了去过哪儿')">🔊 ฟัง Q10</button>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:var(--green); margin-right:6px;">Q11</span>
+                <span class="zh" style="font-weight:500;">你吃过什么中国菜？最喜欢吃什么？</span>
+                <div style="font-size:11px; color:var(--text-muted);">เคยกินอาหารจีนอะไร ชอบอะไรที่สุด? ➔ <strong>我吃过饺子，很好吃！</strong></div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q11', '你吃过什么中国菜最喜欢吃什么')">🔊 ฟัง Q11</button>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:var(--green); margin-right:6px;">Q12</span>
+                <span class="zh" style="font-weight:500;">老师，你觉得清莱怎么样？</span>
+                <div style="font-size:11px; color:var(--text-muted);">คิดว่าเชียงรายเป็นยังไง? ➔ <strong>我觉得清莱很好，很好玩儿！</strong></div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q12', '老师你觉得清莱怎么样')">🔊 ฟัง Q12</button>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- HACK 5 -->
-      <div class="focus-card" style="padding:24px;">
+      <div class="focus-card" style="padding:22px;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
           <span style="font-size:12px; font-weight:700; color:#eab308; background:rgba(234,179,8,0.1); border:1px solid rgba(234,179,8,0.2); padding:2px 8px; border-radius:6px;">Hack 5 • ตัวเลขถามระยะเวลา & ขนาด</span>
-          <span style="font-size:11px; font-family:monospace; color:var(--text-muted);">คุม 4 ข้อ (Q3, Q10, Q11, Q15)</span>
+          <span style="font-size:11px; font-family:monospace; color:var(--text-muted); font-weight:600;">คุม 3 ข้อ (Q3, Q10, Q15)</span>
         </div>
         <div style="font-size:12px; color:var(--text-muted); margin-bottom:4px;">👂 ได้ยินคำว่า:</div>
         <div style="font-size:14px; font-weight:600; color:#fff; margin-bottom:10px;">多久 (duōjiǔ) / 多长时间 (duō cháng shíjiān) / 有多远 (duō yuǎn) / 多大 (duō dà)</div>
@@ -796,9 +908,105 @@
           <div class="ans-pinyin">Liǎng gè yuè le • Wǔbǎi mǐ • Èrshí suì</div>
           <button class="audio-btn success" style="margin-top:8px; padding:6px 12px;" onclick="playAudio('a10', '我来清莱两个月了')">🔊 ฟังเสียงตอบ</button>
         </div>
+        <!-- Question list for Hack 5 -->
+        <div style="margin-top:14px; padding-top:12px; border-top:1px dashed var(--border);">
+          <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">📋 ข้อสอบที่ใช้สูตรนี้ตอบได้ทันที:</div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:#eab308; margin-right:6px;">Q3</span>
+                <span class="zh" style="font-weight:500;">...离...大概有多远？</span>
+                <div style="font-size:11px; color:var(--text-muted);">หอพักอยู่ห่างจาก ม. ประมาณเท่าไหร่? ➔ <strong>五百米，很近。</strong></div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q3', '你的宿舍离学校大概有多远')">🔊 ฟัง Q3</button>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:#eab308; margin-right:6px;">Q10</span>
+                <span class="zh" style="font-weight:500;">你来清莱多长时间了？...</span>
+                <div style="font-size:11px; color:var(--text-muted);">มาอยู่เชียงรายนานเท่าไหร่แล้ว? ➔ <strong>两个月了。</strong></div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q10', '你来清莱多长时间了去过哪儿')">🔊 ฟัง Q10</button>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg); padding:8px 12px; border-radius:8px; border:1px solid var(--border);">
+              <div>
+                <span style="font-weight:700; color:#eab308; margin-right:6px;">Q15</span>
+                <span class="zh" style="font-weight:500;">你是哪年出生的？多大了？</span>
+                <div style="font-size:11px; color:var(--text-muted);">เกิดปีไหน อายุเท่าไหร่? ➔ <strong>二零零四年，二十岁。</strong></div>
+              </div>
+              <button class="audio-btn" style="margin-top:0; padding:4px 8px; font-size:11px;" onclick="playAudio('q15', '你是哪年出生的多大了')">🔊 ฟัง Q15</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPECIFIC 3 QUESTIONS (Q1, Q4, Q5) -->
+      <div class="focus-card" style="padding:22px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <span style="font-size:12px; font-weight:700; color:#a855f7; background:rgba(168,85,247,0.1); border:1px solid rgba(168,85,247,0.2); padding:2px 8px; border-radius:6px;">Special 3 • อีก 3 ข้อจำเพาะ</span>
+          <span style="font-size:11px; font-family:monospace; color:var(--text-muted); font-weight:600;">เก็บครบ 100% (Q1, Q4, Q5)</span>
+        </div>
+        <div style="font-size:12px; color:var(--text-muted); margin-bottom:10px;">3 ข้อนี้มีคีย์เวิร์ดเฉพาะตัว ให้จำประโยคตอบสั้นๆ ประจำข้อ:</div>
+        
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          
+          <!-- Q1 -->
+          <div style="background:var(--bg); padding:12px 14px; border-radius:10px; border:1px solid var(--border);">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-weight:700; color:#a855f7;">Q1 • ถามหาที่อยู่ (在哪儿)</span>
+              <button class="audio-btn" style="margin-top:0; padding:3px 8px; font-size:11px;" onclick="playAudio('q1', '你的宿舍在哪儿')">🔊 ฟังถาม Q1</button>
+            </div>
+            <div class="zh" style="font-size:14px; margin-top:4px;">你的宿舍/家在哪儿？ <span style="font-size:11px; color:var(--text-muted);">(หอพัก/บ้านอยู่ที่ไหน?)</span></div>
+            <div style="margin-top:6px; display:flex; justify-content:space-between; align-items:center; background:rgba(168,85,247,0.06); padding:8px 10px; border-radius:6px;">
+              <div>
+                <span style="font-size:11px; color:var(--text-muted);">🗣️ ตอบสั้น:</span>
+                <span class="zh" style="font-weight:700; color:#fff; font-size:15px; margin-left:6px;">在学校对面。</span>
+                <span style="font-size:11px; color:#a855f7; margin-left:6px;">(ไจ้ เสวีย-เซี่ยว ตุ้ย-เมี่ยน = อยู่ตรงข้าม ม.)</span>
+              </div>
+              <button class="audio-btn success" style="margin-top:0; padding:3px 8px; font-size:11px;" onclick="playAudio('a1', '在学校对面')">🔊 ฟังตอบ</button>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div style="background:var(--bg); padding:12px 14px; border-radius:10px; border:1px solid var(--border);">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-weight:700; color:#a855f7;">Q4 • ถามทางเดิน (怎么走)</span>
+              <button class="audio-btn" style="margin-top:0; padding:3px 8px; font-size:11px;" onclick="playAudio('q4', '去图书馆怎么走')">🔊 ฟังถาม Q4</button>
+            </div>
+            <div class="zh" style="font-size:14px; margin-top:4px;">去图书馆/学校怎么走？ <span style="font-size:11px; color:var(--text-muted);">(ไปห้องสมุดเดินไปยังไง?)</span></div>
+            <div style="margin-top:6px; display:flex; justify-content:space-between; align-items:center; background:rgba(168,85,247,0.06); padding:8px 10px; border-radius:6px;">
+              <div>
+                <span style="font-size:11px; color:var(--text-muted);">🗣️ ตอบสั้น:</span>
+                <span class="zh" style="font-weight:700; color:#fff; font-size:15px; margin-left:6px;">一直往前走，往右拐。</span>
+                <span style="font-size:11px; color:#a855f7; margin-left:6px;">(ตรงไป เลี้ยวขวา)</span>
+              </div>
+              <button class="audio-btn success" style="margin-top:0; padding:3px 8px; font-size:11px;" onclick="playAudio('a4', '一直往前走往右拐')">🔊 ฟังตอบ</button>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div style="background:var(--bg); padding:12px 14px; border-radius:10px; border:1px solid var(--border);">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-weight:700; color:#a855f7;">Q5 • ถามอาการ (怎么了)</span>
+              <button class="audio-btn" style="margin-top:0; padding:3px 8px; font-size:11px;" onclick="playAudio('q5', '你怎么了')">🔊 ฟังถาม Q5</button>
+            </div>
+            <div class="zh" style="font-size:14px; margin-top:4px;">你怎么了？/ 你的手机怎么了？ <span style="font-size:11px; color:var(--text-muted);">(เป็นอะไรไปเหรอ?)</span></div>
+            <div style="margin-top:6px; display:flex; justify-content:space-between; align-items:center; background:rgba(168,85,247,0.06); padding:8px 10px; border-radius:6px;">
+              <div>
+                <span style="font-size:11px; color:var(--text-muted);">🗣️ ตอบสั้น:</span>
+                <span class="zh" style="font-weight:700; color:#fff; font-size:15px; margin-left:6px;">我感冒了，头疼。</span>
+                <span style="font-size:11px; color:#a855f7; margin-left:6px;">(ผมเป็นหวัด ปวดหัวครับ)</span>
+              </div>
+              <button class="audio-btn success" style="margin-top:0; padding:3px 8px; font-size:11px;" onclick="playAudio('a5', '我感冒了头疼')">🔊 ฟังตอบ</button>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>
+
+    <!-- VIEW 3: AUDIO LOOPS -->
 
     <!-- VIEW 3: AUDIO LOOPS -->
     <div id="view-loops" class="hidden">
@@ -859,7 +1067,7 @@
           <span class="loop-badge">3m 20s • Infinite Loop</span>
         </div>
         <p class="loop-desc">
-          Says <strong>"Word 1"</strong> in English ➔ Chinese word ➔ 0.8s pause ➔ Repeated once ➔ 1.5s pause ➔ "Word 2"... Drills all 30 words across Lessons 6–10 into your memory for the 5-point reading section.
+          Says <strong>"Word 1"</strong> in English ➔ Chinese word ➔ 1.0s pause ➔ "Word 2"... Clean single-play drill across all 30 words in Lessons 6–10.
         </p>
 
         <audio controls loop preload="metadata" src="audio/oral_test_vocab_loop.mp3"></audio>
@@ -867,7 +1075,7 @@
         <div class="loop-actions">
           <a href="audio/oral_test_vocab_loop.mp3" download="oral_test_vocab_loop.mp3" class="audio-btn purple" style="margin-top:0;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            Download Vocab Loop MP3 (2.1 MB)
+            Download Vocab Loop MP3 (1.4 MB)
           </a>
         </div>
       </div>
