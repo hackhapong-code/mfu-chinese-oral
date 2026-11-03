@@ -21,9 +21,9 @@
       --green: #2ecc71;
       --green-bg: rgba(46, 204, 113, 0.08);
       --green-border: rgba(46, 204, 113, 0.2);
-      --blue: #38bdf8;
-      --blue-bg: rgba(56, 189, 248, 0.08);
-      --blue-border: rgba(56, 189, 248, 0.2);
+      --purple: #a855f7;
+      --purple-bg: rgba(168, 85, 247, 0.08);
+      --purple-border: rgba(168, 85, 247, 0.2);
     }
 
     * {
@@ -94,7 +94,7 @@
 
     nav {
       display: flex;
-      gap: 6px;
+      gap: 5px;
       background: rgba(255, 255, 255, 0.03);
       padding: 4px;
       border-radius: 10px;
@@ -107,11 +107,12 @@
       color: var(--text-muted);
       font-size: 12px;
       font-weight: 500;
-      padding: 6px 14px;
+      padding: 6px 12px;
       border-radius: 7px;
       cursor: pointer;
       transition: all 0.15s ease;
       font-family: inherit;
+      white-space: nowrap;
     }
 
     .tab-btn:hover {
@@ -237,6 +238,7 @@
       margin-top: 14px;
       transition: all 0.15s ease;
       font-family: inherit;
+      text-decoration: none;
     }
 
     .audio-btn:hover {
@@ -266,6 +268,16 @@
 
     .audio-btn.success:hover {
       background: rgba(46, 204, 113, 0.15);
+    }
+
+    .audio-btn.purple {
+      background: var(--purple-bg);
+      border-color: var(--purple-border);
+      color: var(--purple);
+    }
+
+    .audio-btn.purple:hover {
+      background: rgba(168, 85, 247, 0.15);
     }
 
     .divider {
@@ -401,6 +413,61 @@
       color: var(--text);
     }
 
+    /* VIEW: LOOPS */
+    .loop-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    .loop-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .loop-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .loop-badge {
+      font-size: 11px;
+      font-family: monospace;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: var(--purple-bg);
+      border: 1px solid var(--purple-border);
+      color: var(--purple);
+    }
+
+    .loop-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    audio {
+      width: 100%;
+      height: 40px;
+      border-radius: 8px;
+      outline: none;
+      filter: invert(0.9) hue-rotate(180deg);
+    }
+
+    .loop-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      align-items: center;
+    }
+
+    /* VIEW 2: CHEAT SHEET LIST */
     .list-view {
       display: flex;
       flex-direction: column;
@@ -541,18 +608,20 @@
       <div class="logo-badge">中</div>
       <div class="title-group">
         <h1>MFU Chinese 2 • Oral Test</h1>
-        <p>16 Questions & Part 1 Vocabulary with Thai Translation</p>
+        <p>16 Questions, Vocab & MP3 Loops</p>
       </div>
     </div>
 
     <nav>
       <button class="tab-btn active" onclick="setTab('focus')" id="tab-focus">Focus</button>
+      <button class="tab-btn" onclick="setTab('loops')" id="tab-loops">🎧 Loops (2)</button>
       <button class="tab-btn" onclick="setTab('sheet')" id="tab-sheet">Sheet</button>
       <button class="tab-btn" onclick="setTab('vocab')" id="tab-vocab">Vocab (30)</button>
     </nav>
   </header>
 
   <main>
+    <!-- VIEW 1: FOCUS -->
     <div id="view-focus">
       <div class="focus-card">
         
@@ -632,10 +701,61 @@
       </div>
     </div>
 
-    <!-- VIEW 2: FULL CHEAT SHEET -->
+    <!-- VIEW 2: AUDIO LOOPS -->
+    <div id="view-loops" class="hidden">
+      
+      <!-- LOOP 1: FULL QUESTION & ANSWER -->
+      <div class="loop-card">
+        <div class="loop-title-row">
+          <div>
+            <div class="loop-title">1. Full Exam Loop (Question ➔ Pause ➔ Answer)</div>
+            <div style="font-size:12px; color:var(--accent); margin-top:2px;">English number announcement • Full simulation drill</div>
+          </div>
+          <span class="loop-badge">3m 41s • Infinite Loop</span>
+        </div>
+        <p class="loop-desc">
+          Says <strong>"Question 1"</strong> in English ➔ Question in Chinese ➔ 1.8s pause to formulate your answer ➔ Answer in Chinese ➔ 2.0s pause ➔ "Question 2"... Cycles through all 16 questions continuously.
+        </p>
+
+        <audio controls loop preload="metadata" src="audio/oral_test_full_loop.mp3"></audio>
+
+        <div class="loop-actions">
+          <a href="audio/oral_test_full_loop.mp3" download="oral_test_full_loop.mp3" class="audio-btn primary" style="margin-top:0;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download Full Loop MP3 (2.6 MB)
+          </a>
+        </div>
+      </div>
+
+      <!-- LOOP 2: ANSWERS ONLY -->
+      <div class="loop-card">
+        <div class="loop-title-row">
+          <div>
+            <div class="loop-title">2. Answers-Only Loop (Rapid Muscle Memory)</div>
+            <div style="font-size:12px; color:var(--green); margin-top:2px;">English number announcement • Answer repeated twice</div>
+          </div>
+          <span class="loop-badge">3m 24s • Infinite Loop</span>
+        </div>
+        <p class="loop-desc">
+          Says <strong>"Question 1"</strong> in English ➔ Answer in Chinese ➔ Repeated once ➔ 1.8s pause ➔ "Question 2"... Perfect for passive listening with AirPods while resting or walking to lock the sentences into muscle memory.
+        </p>
+
+        <audio controls loop preload="metadata" src="audio/oral_test_answers_only.mp3"></audio>
+
+        <div class="loop-actions">
+          <a href="audio/oral_test_answers_only.mp3" download="oral_test_answers_only.mp3" class="audio-btn success" style="margin-top:0;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download Answers-Only MP3 (2.5 MB)
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- VIEW 3: FULL CHEAT SHEET -->
     <div id="view-sheet" class="list-view hidden"></div>
 
-    <!-- VIEW 3: VOCABULARY -->
+    <!-- VIEW 4: VOCABULARY -->
     <div id="view-vocab" class="vocab-grid hidden"></div>
   </main>
 
@@ -991,7 +1111,7 @@
     });
 
     function setTab(tab) {
-      ['focus', 'sheet', 'vocab'].forEach(t => {
+      ['focus', 'loops', 'sheet', 'vocab'].forEach(t => {
         const view = document.getElementById('view-' + t);
         const btn = document.getElementById('tab-' + t);
         if (t === tab) {
