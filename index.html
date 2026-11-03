@@ -615,7 +615,7 @@
     <nav>
       <button class="tab-btn active" onclick="setTab('focus')" id="tab-focus">Focus</button>
       <button class="tab-btn" onclick="setTab('hacks')" id="tab-hacks">⚡ 5 Hacks</button>
-      <button class="tab-btn" onclick="setTab('loops')" id="tab-loops">🎧 Loops (3)</button>
+      <button class="tab-btn" onclick="setTab('loops')" id="tab-loops">🎧 Loops (5)</button>
       <button class="tab-btn" onclick="setTab('sheet')" id="tab-sheet">Sheet</button>
       <button class="tab-btn" onclick="setTab('vocab')" id="tab-vocab">Vocab (30)</button>
     </nav>
@@ -710,6 +710,21 @@
         <p style="font-size:12px; color:var(--text-muted); line-height:1.5;">
           ถ้าจำทั้ง 16 ข้อไม่ทัน ให้จำแค่ <strong>5 โครงสร้างคำตอบครอบจักรวาล + 3 ข้อสั้น</strong> ด้านล่างนี้ ได้ยินคีย์เวิร์ดท้ายประโยคให้ยิงคำตอบทันที! มีปุ่มกดฟังเสียงคำถามแต่ละข้อให้เทียบได้เลย
         </p>
+      </div>
+
+            <!-- QUICK UNIVERSAL AUDIO PLAYER BANNER -->
+      <div style="background:linear-gradient(135deg, rgba(56,189,248,0.12), rgba(99,102,241,0.08)); border:1px solid rgba(56,189,248,0.3); border-radius:14px; padding:16px 18px; display:flex; flex-direction:column; gap:10px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:16px;">⚡</span>
+            <div>
+              <div style="font-size:14px; font-weight:700; color:#fff;">Universal Master Answers Loop (2m 45s)</div>
+              <div style="font-size:11px; color:var(--text-muted);">ถามด้วยข้อสอบจริง ➔ เว้น 1.5 วิ ➔ ตอบด้วยคำตอบครอบจักรวาลที่สั้นและจำง่ายที่สุด</div>
+            </div>
+          </div>
+          <span style="font-size:11px; font-weight:700; color:var(--accent); background:var(--accent-bg); border:1px solid var(--accent-border); padding:3px 8px; border-radius:6px;">All 16 Hacks</span>
+        </div>
+        <audio controls loop preload="metadata" src="audio/oral_test_universal_loop.mp3" style="width:100%; height:36px;"></audio>
       </div>
 
       <!-- HACK 1 -->
@@ -1011,11 +1026,57 @@
     <!-- VIEW 3: AUDIO LOOPS -->
     <div id="view-loops" class="hidden">
       
+            <!-- UNIVERSAL LOOP 1: QUESTION -> UNIVERSAL MASTER ANSWER -->
+      <div class="loop-card" style="border: 1px solid rgba(56,189,248,0.35); background: linear-gradient(180deg, rgba(56,189,248,0.06), var(--card-bg));">
+        <div class="loop-title-row">
+          <div>
+            <div class="loop-title" style="color:var(--accent);">⚡ Universal Hacks Loop (Recommended for 2 Days Prep)</div>
+            <div style="font-size:12px; color:var(--text-muted); margin-top:2px;">English number announcement • Question ➔ 1.5s pause ➔ Short Universal Master Answer</div>
+          </div>
+          <span class="loop-badge" style="background:var(--accent-bg); color:var(--accent); border-color:var(--accent-border);">2m 45s • Top Priority</span>
+        </div>
+        <p class="loop-desc">
+          Cycles through all 16 questions using the <strong>5 Universal Master Answers & Safe Denials</strong> (e.g. Q13 ➔ <em>还没呢</em>, Q8 ➔ <em>我没吃过</em>, Q2 ➔ <em>去超市买东西</em>). Perfect for memorizing the pattern shortcuts with zero wasted effort!
+        </p>
+
+        <audio controls loop preload="metadata" src="audio/oral_test_universal_loop.mp3"></audio>
+
+        <div class="loop-actions">
+          <a href="audio/oral_test_universal_loop.mp3" download="oral_test_universal_loop.mp3" class="audio-btn primary" style="margin-top:0;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download Universal Loop MP3 (2.2 MB)
+          </a>
+        </div>
+      </div>
+
+      <!-- UNIVERSAL LOOP 2: UNIVERSAL ANSWERS ONLY -->
+      <div class="loop-card" style="border: 1px solid rgba(34,197,94,0.35); background: linear-gradient(180deg, rgba(34,197,94,0.05), var(--card-bg));">
+        <div class="loop-title-row">
+          <div>
+            <div class="loop-title" style="color:var(--green);">⚡ Universal Answers-Only Loop (Rapid Hack Drill)</div>
+            <div style="font-size:12px; color:var(--text-muted); margin-top:2px;">English number announcement • Universal Answer repeated twice</div>
+          </div>
+          <span class="loop-badge" style="background:var(--green-bg); color:var(--green); border-color:var(--green-border);">2m 23s • Rapid Drill</span>
+        </div>
+        <p class="loop-desc">
+          Says <strong>"Question 1"</strong> in English ➔ Short Master Answer in Chinese ➔ Repeated once ➔ 1.5s pause ➔ "Question 2"... Drills the 5 universal patterns directly into your vocal muscle memory without listening to questions.
+        </p>
+
+        <audio controls loop preload="metadata" src="audio/oral_test_universal_answers_only.mp3"></audio>
+
+        <div class="loop-actions">
+          <a href="audio/oral_test_universal_answers_only.mp3" download="oral_test_universal_answers_only.mp3" class="audio-btn success" style="margin-top:0;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download Universal Answers MP3 (1.8 MB)
+          </a>
+        </div>
+      </div>
+
       <!-- LOOP 1: FULL QUESTION & ANSWER -->
       <div class="loop-card">
         <div class="loop-title-row">
           <div>
-            <div class="loop-title">1. Full Exam Loop (Question ➔ Pause ➔ Answer)</div>
+            <div class="loop-title">3. Standard Full Exam Loop (Long Textbook Answers)</div>
             <div style="font-size:12px; color:var(--accent); margin-top:2px;">English number announcement • Full simulation drill</div>
           </div>
           <span class="loop-badge">3m 41s • Infinite Loop</span>
@@ -1038,7 +1099,7 @@
       <div class="loop-card">
         <div class="loop-title-row">
           <div>
-            <div class="loop-title">2. Answers-Only Loop (Rapid Muscle Memory)</div>
+            <div class="loop-title">4. Standard Answers-Only Loop (Long Textbook Answers)</div>
             <div style="font-size:12px; color:var(--green); margin-top:2px;">English number announcement • Answer repeated twice</div>
           </div>
           <span class="loop-badge">3m 24s • Infinite Loop</span>
@@ -1061,7 +1122,7 @@
       <div class="loop-card">
         <div class="loop-title-row">
           <div>
-            <div class="loop-title">3. Part 1 Vocabulary Loop (30 Words)</div>
+            <div class="loop-title">5. Part 1 Vocabulary Loop (30 Words • 2m 00s)</div>
             <div style="font-size:12px; color:var(--purple); margin-top:2px;">English number announcement • Word repeated twice</div>
           </div>
           <span class="loop-badge">3m 20s • Infinite Loop</span>
